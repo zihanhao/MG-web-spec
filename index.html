@@ -1318,8 +1318,9 @@ pre::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px}
     <span>Web 端规范</span>
   </div>
   <div class="sidebar-nav">
-    <div class="nav-group">
+<div class="nav-group">
       <div class="nav-group-title">基础</div>
+      <div class="nav-item" data-key="layout">Layout 布局</div>
       <div class="nav-item" data-key="container">Container 布局容器</div>
       <div class="nav-item" data-key="color">Color 色彩</div>
       <div class="nav-item" data-key="typography">Typography 字体</div>
@@ -15592,69 +15593,6 @@ function renderUploadSvgPage(){
   top:153px;
   left:462px;
 }
-.upload-local-file-name,
-.upload-svg-file-name{
-  cursor:text!important;
-  -webkit-user-select:text!important;
-  user-select:text!important;
-}
-.upload-v336-svg-page,
-.upload-v336-svg-page *:not(img):not(svg):not(path){
-  -webkit-user-select:text!important;
-  user-select:text!important;
-}
-.upload-copy-heading-v347{
-  position:absolute;
-  z-index:3;
-  display:block;
-  padding:0 4px 2px 0;
-  background:#FFF;
-  color:#303133;
-  cursor:text;
-  font-family:Arial,"Microsoft YaHei",sans-serif;
-  font-size:20px;
-  font-weight:400;
-  line-height:26px;
-  white-space:nowrap;
-}
-.upload-copy-heading-v347.is-avatar{top:64px;left:0}
-.upload-copy-heading-v347.is-logo{top:64px;left:563px}
-.upload-copy-heading-v347.is-template{top:64px;left:1126px}
-.upload-copy-heading-v347.is-menu{top:383px;left:0}
-.upload-copy-heading-v347.is-generic{top:697px;left:0}
-.upload-copy-heading-v347.is-attachment{top:697px;left:564px}
-.upload-attachment-title-v347{
-  position:absolute;
-  top:24px;
-  left:29px;
-  z-index:3;
-  padding-right:6px;
-  background:#FFF;
-  color:#333;
-  cursor:text;
-  font-size:14px;
-  font-weight:600;
-  line-height:20px;
-}
-.upload-attachment-interaction-v346 .upload-svg-attachment-trigger{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:1px dashed #CCD4E0;
-  border-radius:3px;
-  background:#FFF;
-  color:#515A6E;
-  font-size:13px;
-  line-height:36px;
-}
-.upload-attachment-trigger-text-v347{
-  cursor:text;
-  white-space:nowrap;
-}
-.upload-attachment-trigger-plus-v347{
-  margin-right:5px;
-  color:#999;
-}
 </style>
 
 <script id="upload-attachment-source-v345">
@@ -15679,18 +15617,11 @@ function renderUploadSvgPage(){
   return '<div class="page-content upload-v336-svg-page">' +
     '<div class="upload-v337-title"><h1>Upload 上传</h1></div>' +
     '<img class="upload-v336-svg-artwork" src="' + UPLOAD_V336_SVG_SOURCE + '" width="1654" height="1025" alt="Upload 上传组件规范">' +
-    '<span class="upload-copy-heading-v347 is-avatar">用户设置_头像</span>' +
-    '<span class="upload-copy-heading-v347 is-logo">用户设置_系统LOGO</span>' +
-    '<span class="upload-copy-heading-v347 is-template">生产报表_录入模版管理-新增</span>' +
-    '<span class="upload-copy-heading-v347 is-menu">系统管理_菜单管理</span>' +
-    '<span class="upload-copy-heading-v347 is-generic">通用上传组件</span>' +
-    '<span class="upload-copy-heading-v347 is-attachment">自定义组件_附件上传</span>' +
     '<span class="upload-attachment-v345-backing" aria-hidden="true"></span>' +
     '<img class="upload-attachment-v345-artwork" src="' + UPLOAD_ATTACHMENT_V345_SOURCE + '" width="915" height="218" alt="自定义组件附件上传">' +
     '<div class="upload-svg-attachment upload-attachment-interaction-v346" data-upload-svg-attachment>' +
       '<span class="upload-attachment-rows-cover" aria-hidden="true"></span>' +
-      '<span class="upload-attachment-title-v347">附件上传</span>' +
-      '<button class="upload-svg-attachment-trigger" type="button" data-upload-svg-attachment-trigger aria-label="上传文件"><span class="upload-attachment-trigger-text-v347"><span class="upload-attachment-trigger-plus-v347" aria-hidden="true">⊕</span>上传文件</span></button>' +
+      '<button class="upload-svg-attachment-trigger" type="button" data-upload-svg-attachment-trigger aria-label="上传文件"><img class="upload-svg-attachment-trigger-artwork" src="' + UPLOAD_FILE_BUTTON_SOURCE + '" width="112" height="38" alt=""></button>' +
       attachmentSlots +
       '<input class="upload-svg-hidden-input" type="file" multiple data-upload-svg-attachment-input>' +
       '<span class="upload-svg-live" data-upload-svg-live aria-live="polite"></span>' +
